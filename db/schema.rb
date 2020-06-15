@@ -18,9 +18,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_022649) do
 
   create_table "book_rentals", force: :cascade do |t|
     t.datetime "due_date"
-    t.datetime "returned"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "returned"
     t.integer "user_id"
     t.integer "book_id"
   end
